@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Entitlement" max_length="40" name="service_entitlement" sizeclass="0" type="collection">
+        <element attributes="encode_utf8=false,readonly_clickthrough=true" label="Install Base Item" max_length="32" name="install_base_item" reference="sn_install_base_item" reference_qual="javascript:new global.CSManagementUtils().filterOnAccountAndProduct(current);" type="reference"/>
+        <element attributes="encode_utf8=false,readonly_clickthrough=true" label="Sold Product" max_length="32" name="sold_product" reference="sn_install_base_sold_product" reference_qual="javascript:new global.CSManagementUtils().filterOnAccountAndProduct(current);" type="reference"/>
+        <index name="index">
+            <element name="install_base_item"/>
+        </index>
+        <index name="index2">
+            <element name="sold_product"/>
+        </index>
+    </element>
+</database>

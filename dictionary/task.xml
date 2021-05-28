@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="all_tables.detail_row=short_description,all_tables.display_color=priority,all_tables.live_feed=true,all_tables.text_index_translations=true,extension_model=hierarchy,hasListeners=true,largeTable=true,reference_index_include=active" label="Task" max_length="40" name="task" sizeclass="950" text_index="true" type="collection">
+        <element hint="If checked, the agent needs to review this task." label="Needs attention" max_length="40" name="needs_attention" type="boolean"/>
+        <element choice="1" label="Action status" max_length="40" name="action_status" read_only="true" type="integer">
+            <choice>
+                <element inactive_on_update="false" label="Blocked internally" sequence="1" value="1"/>
+                <element inactive_on_update="false" label="Blocked by customer" sequence="2" value="2"/>
+                <element inactive_on_update="false" label="Blocked internally and by customer" sequence="3" value="3"/>
+                <element inactive_on_update="false" label="Needs attention" sequence="4" value="4"/>
+            </choice>
+        </element>
+    </element>
+</database>
